@@ -1,0 +1,40 @@
+<template>
+  <div ref="advertisement" id="advertisement" @click='jumpLogin' aria-disabled="true">
+    {{msg + '...'}}
+    <router-view></router-view>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'indexView',
+  data () {
+    return {
+      msg: 'Welcome to Your Vue.js App'
+    }
+  },
+  methods: {
+    jumpLogin () {
+      console.log('进入下一页')
+      this.$router.push('loginView')
+    },
+    init () {
+      setTimeout(function () {
+        document.getElementById('advertisement').click()
+      }, 3000)
+    }
+  },
+  created () {
+    console.log('indexView')
+    setTimeout(function () {
+      document.getElementById('advertisement').click()
+    }, 4000)
+  }
+}
+</script>
+
+<style scoped>
+  .inputDiv {
+    margin-bottom: 15px;
+  }
+</style>
