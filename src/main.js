@@ -3,8 +3,12 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import axios from './http'
+import cookie from './cookie'
 
 Vue.config.productionTip = false
+Vue.prototype.$http = axios
+Vue.prototype.$cookie = cookie
 
 /* eslint-disable no-new */
 new Vue({

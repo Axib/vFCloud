@@ -16,18 +16,21 @@ export default {
   methods: {
     jumpLogin () {
       console.log('进入下一页')
-      this.$router.push('loginView')
+      this.$router.push({name: 'loginView', params: {userName: 'admin'}})
     },
     init () {
       setTimeout(function () {
-        document.getElementById('advertisement').click()
+        if (document.getElementById('advertisement')) {
+          document.getElementById('advertisement').click()
+        }
       }, 3000)
     }
   },
   created () {
-    console.log('indexView')
     setTimeout(function () {
-      document.getElementById('advertisement').click()
+      if (document.getElementById('advertisement')) {
+        document.getElementById('advertisement').click()
+      }
     }, 4000)
   }
 }
