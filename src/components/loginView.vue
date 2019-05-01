@@ -18,51 +18,6 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'loginView',
-  methods: {
-    goBack: function () {
-      this.$router.push(-1)
-    },
-    login () {
-      this.$http.get('http://127.0.0.1:8088/member/comp/001/get')
-        .then(res => {
-          console.log(res, 123)
-        })
-        .catch(res => {
-          console.log(res, 321)
-        })
-    }
-  },
-  created () {
-    this.$cookie.clear()
-    this.$cookie.set('userName', 'admin')
-    this.$cookie.set('access_token', '123')
-  }
-}
+<script src="../controller/loginViewController.js"></script>
 
-</script>
-
-<style scoped>
-  .inputDiv {
-    margin-top: 10px;
-  }
-  .loginBtn {
-    background-color: gray;
-    color: white;
-    font-size: 14px;
-    margin-top: 10px;
-    width: 100px;
-  }
-  .forgetDiv {
-    width: 200px;
-    margin: auto;
-    padding-top: 10px;
-  }
-  .forgetSpan {
-    font-size: 12px;
-    float: right;
-    cursor: pointer;
-  }
-</style>
+<style src="../css/login.css"></style>
