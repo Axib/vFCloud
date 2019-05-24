@@ -3,8 +3,8 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import axios from './http'
-import cookie from './cookie'
+import axios from './router/httpConfig/http'
+import cookie from './router/httpConfig/cookie'
 
 Vue.config.productionTip = false
 Vue.prototype.$http = axios
@@ -17,3 +17,5 @@ new Vue({
   components: { App },
   template: '<App/>'
 })
+/* 取消字段选择功能 */
+document.onselectstart = function () { return false }

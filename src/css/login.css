@@ -1,11 +1,31 @@
+.login-wrapper {
+  position: absolute;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 30px 60px;
+  border-radius: 5px;
+  top:-100%;
+  left:50%;
+  -webkit-transform: translate(-50%,-100%);
+  -moz-transform: translate(-50%,-100%);
+  transform:translate(-50%,-100%);
+}
+.login-wrapper.load {
+  top:50%;
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  transform:translate(-50%,-50%);
+  transition: 0.4s;
+}
+
 .inputDiv {
-  margin-top: 10px;
+  margin-top: 20px;
 }
 .loginBtn {
   background-color: gray;
   color: white;
   font-size: 14px;
-  margin-top: 10px;
+  margin-top: 20px;
   width: 100px;
 }
 .forgetDiv {
@@ -17,4 +37,36 @@
   font-size: 12px;
   float: right;
   cursor: pointer;
+}
+
+.course-banner-box {
+  position: absolute;
+  width: 100%;
+  height: 600px;
+  top:50%;
+  -webkit-transform: translate(0,-50%);
+  -moz-transform: translate(0,-50%);
+  transform:translate(0,-50%);
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  margin: 20px auto;
+}
+
+.swiper-slide {
+  background-size: 100% 100%;
+}
+
+.swiper-slide.slide1 {
+  background-image: url("//przpvntfi.bkt.clouddn.com/image/home_page.jpg");
+}
+
+.swiper-slide.slide2 {
+  background-image: url("//przpvntfi.bkt.clouddn.com/image/home_page2.jpg");
+}
+
+.swiper-slide.slide3 {
+  background-image: url("//przpvntfi.bkt.clouddn.com/image/home_page3.jpg");
 }

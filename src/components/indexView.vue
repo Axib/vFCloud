@@ -10,7 +10,7 @@ export default {
   name: 'indexView',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: '欢迎进入'
     }
   },
   methods: {
