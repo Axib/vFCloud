@@ -4,13 +4,13 @@ export default {
   name: 'loginView',
   data () {
     return {
-      loadLogin: false
+      loadLogin: false,
+      conheight: {
+        height: ''
+      }
     }
   },
   methods: {
-    goBack: function () {
-      this.$router.push(-1)
-    },
     login () {
       this.$http.get('http://47.100.170.235:8088/member/comp/001/get')
         .then(res => {
@@ -31,6 +31,9 @@ export default {
       setTimeout(function () {
         _this.loadLogin = true
       }, 400)
+    },
+    initFrame: function () {
+      this.conheight.height = window.innerHeight + 'px'
     }
   },
   mounted () {
@@ -45,11 +48,18 @@ export default {
       autoplay: 1000, // 自动切换的时间间隔（单位ms），不设定该参数slide不会自动切换。
       autoplayDisableOnInteraction: false // 点击后打断auto-play
     })
+    const that = this
+    window.onresize = () => {
+      return (() => {
+        that.initFrame()
+      })()
+    }
   },
   created () {
     this.$cookie.clear()
     this.$cookie.set('userName', 'admin')
     this.$cookie.set('access_token', '123')
     this.loadShow()
+    this.initFrame()
   }
 }
