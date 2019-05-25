@@ -79,5 +79,9 @@ export default {
   },
   created () {
     this.initFrame()
+    let that = this
+    setTimeout(function () {
+      that.displayControl()
+    }, 1000)
   }
 }
