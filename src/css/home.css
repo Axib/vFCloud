@@ -77,6 +77,7 @@
   left: 0;
   top: 0;
   background-color: #304156;
+  overflow-y: auto;
 }
 
 .home-wrapper .menu-wrapper.open {
@@ -89,33 +90,51 @@
   transition: 0.3s;
 }
 
-.home-wrapper .menu-wrapper table {
+.home-wrapper .menu-wrapper vue-scroll {
   width: 100%;
   height: 100%;
   border-spacing: 0;
 }
 
-.home-wrapper .menu-wrapper table .td-d {
+.td-d {
   color: rgb(191, 203, 217);
-  width: calc(100% - 30px);
+  width: 100%;
   height: 45px;
-  display: flex;
-  align-items: center;
-  padding-left: 30px;
+  max-height: 45px;
+  overflow: hidden;
+  transition: max-height .8s;
 }
 
-.home-wrapper .menu-wrapper table .td-d:hover {
-  background-color: rgba(30, 45, 60, 1);
+.td-d.open {
+  height: auto;
+  max-height: 888px;
+}
+
+.td-d .parent,
+.td-d .children .child {
+  color: rgb(191, 203, 217);
+  width: calc(100% - 15px);
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  cursor: pointer;
+}
+
+.td-d .parent:hover,
+.td-d .children .child:hover {
+  background-color: #001528;
   transition: 0.6s;
 }
 
-.home-wrapper .menu-wrapper table .td-d.choose {
+.td-d .parent.choose {
   color: rgb(64, 158, 255);
   background-color: rgba(30, 45, 60, 1);
   transition: 0.1s;
 }
 
-.home-wrapper .menu-wrapper table .td-d .icon {
+.td-d .parent .icon,
+.td-d .children .child .icon {
   height: 20px;
   width: 20px;
   margin-top: -2px;
@@ -123,20 +142,44 @@
   transition: 0.3s;
 }
 
-.home-wrapper .menu-wrapper table .td-d .icon.close {
-  margin-left: 100px;
+.td-d .parent .icon.close,
+.td-d .children .child .icon.close {
+  margin-left: 115px;
   transition: 0.3s;
 }
 
-.home-wrapper .menu-wrapper table .td-d span {
+.td-d .parent span,
+.td-d .children .child span {
   opacity:1;
   transition: 0.4s;
 }
 
-.home-wrapper .menu-wrapper table .td-d span.close {
+.td-d .parent span.close,
+.td-d .children .child span.close {
   opacity:0;
   position: absolute;
   transition: 0s;
 }
 
+.td-d .children {
+  color: rgb(191, 203, 217);
+  width: 100%;
+  height: auto;
+  align-items: center;
+}
+
+.td-d .children .child {
+  width: calc(100% - 30px);
+  height: 45px;
+  padding-left: 30px;
+  background-color: #1f2d3d;
+}
+
+.td-d .children .child .icon {
+   height: 18px;
+   width: 18px;
+   margin-top: -1px;
+   margin-right: 10px;
+   transition: 0.3s;
+ }
 

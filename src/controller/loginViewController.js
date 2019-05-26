@@ -12,7 +12,7 @@ export default {
   },
   methods: {
     login () {
-      this.$http.get('http://47.100.170.235:8088/member/comp/001/get')
+      this.$http.get(this.NET.BASE_URL + '/member/comp/001/get')
         .then(res => {
           console.log(res, 123)
           this.$router.push('homeView')
