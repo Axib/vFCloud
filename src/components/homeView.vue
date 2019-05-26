@@ -16,9 +16,10 @@
           <div :class="menu_index == item.id ? 'parent choose' : 'parent'" v-on:click="expansionMenu(index)">
             <img :class="[menu_open ? 'icon':'icon close']" :src="menu_index == item.id ? item.selectUrl : item.normalUrl">
             <span :class="[menu_open ? '':'close']">{{item.name}}</span>
+            <img :class="[item.open ? 'status open':'status']" v-if="menu_open && item.children && item.children.length > 0" src="//przpvntfi.bkt.clouddn.com/image/menu/menu_open.png">
           </div>
-          <div class="children" v-if="!item.close">
-            <div :class="menu_child_index == child.id ? 'child choose' : 'child'" v-for="(child, cIndex) in item.children" v-on:click="expansionChildMenu(cIndex)" :key="child.id">
+          <div class="children" v-if="item.open">
+            <div :class="menu_child_index == child.id ? 'child choose' : 'child'" v-for="(child) in item.children" v-on:click="expansionChildMenu(child)" :key="child.id">
               <img :class="[menu_open ? 'icon':'icon close']" :src="menu_child_index == child.id ? child.selectUrl : child.normalUrl">
               <span :class="[menu_open ? '':'close']">{{child.name}}</span>
             </div>

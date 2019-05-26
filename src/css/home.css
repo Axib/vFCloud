@@ -99,8 +99,9 @@
 .td-d {
   color: rgb(191, 203, 217);
   width: 100%;
-  height: 45px;
-  max-height: 45px;
+  height: 50px;
+  max-height: 50px;
+  font-size: 15px;
   overflow: hidden;
   transition: max-height .8s;
 }
@@ -127,17 +128,32 @@
   transition: 0.6s;
 }
 
-.td-d .parent.choose {
+.td-d .parent.choose,
+.td-d .children .child.choose {
   color: rgb(64, 158, 255);
-  background-color: rgba(30, 45, 60, 1);
-  transition: 0.1s;
+  /*background-color: rgba(30, 45, 60, 1);*/
+  transition: 0s;
+}
+
+.td-d .parent .status {
+  height: 15px;
+  width: 15px;
+  margin-top: -2px;
+  position: absolute;
+  right: 15px;
+  transform: rotate(0deg);
+  transition: 0.5s;
+}
+
+.td-d .parent .status.open {
+  transform: rotate(-180deg);
 }
 
 .td-d .parent .icon,
 .td-d .children .child .icon {
   height: 20px;
   width: 20px;
-  margin-top: -2px;
+  margin-top: -1px;
   margin-right: 10px;
   transition: 0.3s;
 }
@@ -145,7 +161,6 @@
 .td-d .parent .icon.close,
 .td-d .children .child .icon.close {
   margin-left: 115px;
-  transition: 0.3s;
 }
 
 .td-d .parent span,
@@ -170,6 +185,7 @@
 
 .td-d .children .child {
   width: calc(100% - 30px);
+  font-size: 14px;
   height: 45px;
   padding-left: 30px;
   background-color: #1f2d3d;
