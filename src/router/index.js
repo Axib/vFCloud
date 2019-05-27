@@ -26,9 +26,19 @@ export default new Router({
       component: loginView
     },
     {
-      path: '/homeView',
+      path: '/home',
       name: 'homeView',
       component: homeView
+      /* components: {
+        default: ,
+        login: loginView,
+        child: Child
+      } */
+      /* component: homeView,
+      children: [{
+        path: '',
+        component: loginView
+      }] */
     }
   ]
 })

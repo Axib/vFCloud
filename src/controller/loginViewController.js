@@ -15,7 +15,7 @@ export default {
       this.$http.get(this.NET.BASE_URL + '/member/comp/001/get')
         .then(res => {
           console.log(res, 123)
-          this.$router.push('homeView')
+          this.$router.push('home')
         })
         .catch(res => {
           console.log(res, 321)

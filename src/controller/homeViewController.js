@@ -1,5 +1,13 @@
+import settlement from '../components/cashier/settlementView'
+import applycard from '../components/cashier/applyCardView'
+import recharge from '../components/cashier/rechargeView'
 
 export default {
+  components: {
+    settlement,
+    recharge,
+    applycard // 注册
+  },
   name: 'homeView',
   data () {
     return {
@@ -102,13 +110,19 @@ export default {
           selectUrl: '//przpvntfi.bkt.clouddn.com/image/menu/menu_cashier_select.png',
           children: [{
             id: 'e38c5e7e7f63102981b4k0163e0c7f33',
-            name: '设置',
+            name: '买单',
             normalUrl: '//przpvntfi.bkt.clouddn.com/image/menu/menu_setting_normal.png',
             selectUrl: '//przpvntfi.bkt.clouddn.com/image/menu/menu_setting_select.png',
             children: []
           }, {
             id: 'e38c5e7elck311e981b4l0163e0c7f33',
-            name: '设置',
+            name: '充值',
+            normalUrl: '//przpvntfi.bkt.clouddn.com/image/menu/menu_setting_normal.png',
+            selectUrl: '//przpvntfi.bkt.clouddn.com/image/menu/menu_setting_select.png',
+            children: []
+          }, {
+            id: 'e38c5e7weck311e981b4l0163e0c7f33',
+            name: '办卡',
             normalUrl: '//przpvntfi.bkt.clouddn.com/image/menu/menu_setting_normal.png',
             selectUrl: '//przpvntfi.bkt.clouddn.com/image/menu/menu_setting_select.png',
             children: []
@@ -198,7 +212,18 @@ export default {
       ],
       conheight: {
         height: ''
-      }
+      },
+      componentPages: [
+        {
+          name: 'loginView',
+          key: 'login'
+        }
+      ],
+      labelList: [
+        {key: 'settlement', id: 'e38c5e7e7f63102981b4k0163e0c7f33'},
+        {key: 'recharge', id: 'e38c5e7elck311e981b4l0163e0c7f33'},
+        {key: 'applycard', id: 'e38c5e7weck311e981b4l0163e0c7f33'}
+      ]
     }
   },
   methods: {
@@ -245,6 +270,7 @@ export default {
     expansionChildMenu: function (childItem) {
       this.menu_child_index = childItem.id
       this.menu_index = ''
+      // this.$router.push('/home')
     },
     initFrame: function () {
       this.conheight.height = window.innerHeight + 'px'
