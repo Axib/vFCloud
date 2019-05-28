@@ -27,8 +27,13 @@
         </div>
       </vue-scroll>
     </div>
-    <div :class="[menu_open ? 'components-wrapper compress' : 'components-wrapper']">
-      <component :is="label.key"  v-for="(label) in labelList" :key="label.key" v-show="menu_index == label.id || menu_child_index == label.id"></component>
+    <div  :class="[menu_open ? 'tabbed round compress' : 'tabbed round']" v-if="labelList && labelList.length > 0">
+      <ul>
+        <li :class='menu_index == label.id || menu_child_index == label.id ? "active" : ""' v-for="(label) in labelList" :key="label.key" v-on:click="chooseLabel(label)">{{label.name}}</li>
+      </ul>
+    </div>
+    <div :class="[menu_open ? 'components-wrapper compress' : 'components-wrapper']" v-if="labelList && labelList.length > 0">
+      <component :is="label.key" name="" v-for="(label) in labelList" :key="label.key" v-show="menu_index == label.id || menu_child_index == label.id"></component>
     </div>
   </div>
 </template>

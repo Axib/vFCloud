@@ -1,42 +1,8 @@
-// 收银
-import settlement from '../components/cashier/settlementView'
-import applyCard from '../components/cashier/applyCardView'
-import recharge from '../components/cashier/rechargeView'
-// 财务
-import performanceStatistics from '../components/finance/performanceStatisticsView'
-// 人事
-import memberInventory from '../components/inventory/memberInventoryView'
-// 会员
-import memberCard from '../components/member/memberCardView'
-import memberInfo from '../components/member/memberInfoView'
-// 人事
-import employeeTurnover from '../components/personnel/employeeTurnoverView'
-// 设置
-import commonDataSet from '../components/setting/commonDataSetView'
-import systemParamSet from '../components/setting/systemParamSetView'
-// 库存
-import productInStock from '../components/warehouse/productInStockView'
-import productOutStock from '../components/warehouse/productOutStockView'
-// 关于
-import about from '../components/aboutView'
+import configuration from './configurationController'
 
 export default {
-  components: { // 注册
-    settlement,
-    recharge,
-    applyCard,
-    performanceStatistics,
-    memberInventory,
-    memberCard,
-    memberInfo,
-    employeeTurnover,
-    commonDataSet,
-    systemParamSet,
-    productInStock,
-    productOutStock,
-    about
-  },
   name: 'homeView',
+  components: configuration.components,
   data () {
     return {
       menu_open: false,
@@ -44,16 +10,7 @@ export default {
       menu_child_index: '',
       ops: {
         mode: 'native',
-        vuescroll: {},
-        scrollPanel: {},
-        rail: {
-          keepShow: false
-        },
-        bar: {
-          hoverStyle: true,
-          onlyShowBarOnScroll: false, // 是否只有滚动的时候才显示滚动条
-          background: 'black'
-        }
+        bar: {background: 'black'}
       },
       menu_list: [
         {
@@ -259,7 +216,9 @@ export default {
         if (!find) {
           this.labelList.push({
             id: menuItem.id,
-            key: menuItem.key
+            key: menuItem.key,
+            name: menuItem.name,
+            child: 0
           })
         }
       }
@@ -278,9 +237,15 @@ export default {
       if (!find) {
         this.labelList.push({
           id: childItem.id,
-          key: childItem.key
+          key: childItem.key,
+          name: childItem.name,
+          child: 1
         })
       }
+    },
+    chooseLabel: function (label) {
+      this.menu_child_index = label.child ? label.id : ''
+      this.menu_index = !label.child ? label.id : ''
     },
     initFrame: function () {
       this.conheight.height = window.innerHeight + 'px'
