@@ -244,8 +244,23 @@ export default {
       }
     },
     chooseLabel: function (label) {
-      this.menu_child_index = label.child ? label.id : ''
-      this.menu_index = !label.child ? label.id : ''
+      this.menu_child_index = label && label.child ? label.id : ''
+      this.menu_index = label && !label.child ? label.id : ''
+    },
+    closeLabel: function (index, label) {
+      this.labelList.splice(index, 1)
+      if (this.menu_child_index == label.id || this.menu_index == label.id) {
+        var labelItem = null
+        if (this.labelList.length > index) {
+          labelItem = this.labelList[index]
+        } else {
+          labelItem = this.labelList[this.labelList.length - 1]
+        }
+        let that = this
+        setTimeout(function () {
+          that.chooseLabel(labelItem)
+        }, 1)
+      }
     },
     initFrame: function () {
       this.conheight.height = window.innerHeight + 'px'

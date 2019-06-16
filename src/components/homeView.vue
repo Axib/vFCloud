@@ -27,10 +27,15 @@
         </div>
       </vue-scroll>
     </div>
-    <div  :class="[menu_open ? 'tabbed round compress' : 'tabbed round']" v-if="labelList && labelList.length > 0">
-      <ul>
-        <li :class='menu_index == label.id || menu_child_index == label.id ? "active" : ""' v-for="(label) in labelList" :key="label.key" v-on:click="chooseLabel(label)">{{label.name}}</li>
-      </ul>
+    <div :class="[menu_open ? 'tabbed round compress' : 'tabbed round']" v-if="labelList && labelList.length > 0">
+      <vue-scroll :ops="ops">
+        <ul>
+          <li :class='menu_index == label.id || menu_child_index == label.id ? "active" : ""' v-for="(label, index) in labelList" :key="label.key" v-on:click="chooseLabel(label)">
+            {{label.name}}
+            <img class="close" src="//przpvntfi.bkt.clouddn.com/image/icon/label_close.png" v-on:click="closeLabel(index, label)"/>
+          </li>
+        </ul>
+      </vue-scroll>
     </div>
     <div :class="[menu_open ? 'components-wrapper compress' : 'components-wrapper']" v-if="labelList && labelList.length > 0">
       <component :is="label.key" name="" v-for="(label) in labelList" :key="label.key" v-show="menu_index == label.id || menu_child_index == label.id"></component>
