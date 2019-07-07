@@ -12,6 +12,22 @@ export default {
         mode: 'native',
         bar: {background: 'black'}
       },
+      opsTab: {
+        mode: 'native',
+        bar: {
+          showDelay: 500,
+          onlyShowBarOnScroll: false,
+          keepShow: true,
+          background: 'rgba(0, 0, 0, 0.6)',
+          opacity: 1,
+          hoverStyle: false,
+          specifyBorderRadius: false,
+          minSize: false,
+          size: '6px',
+          disable: false,
+          bottom: 0
+        }
+      },
       menu_list: [
         {
           id: 'e38c5e7e7f6311e981b400163e0c7f33',
@@ -220,6 +236,17 @@ export default {
             name: menuItem.name,
             child: 0
           })
+
+          if (this.$refs.tabLi) {
+            let that = this
+            setTimeout(function () {
+              var w = 0
+              that.$refs.tabLi.forEach(function (item) {
+                w += parseInt(item.offsetWidth) + 38
+              })
+              that.$refs.tabUL.style.width = w + 'px'
+            }, 50)
+          }
         }
       }
     },
@@ -241,11 +268,32 @@ export default {
           name: childItem.name,
           child: 1
         })
+        if (this.$refs.tabLi) {
+          let that = this
+          setTimeout(function () {
+            var w = 0
+            that.$refs.tabLi.forEach(function (item) {
+              w += parseInt(item.offsetWidth) + 38
+            })
+            that.$refs.tabUL.style.width = w + 'px'
+          }, 50)
+        }
       }
     },
     chooseLabel: function (label) {
       this.menu_child_index = label && label.child ? label.id : ''
       this.menu_index = label && !label.child ? label.id : ''
+
+      if (this.$refs.tabLi) {
+        let that = this
+        setTimeout(function () {
+          var w = 0
+          that.$refs.tabLi.forEach(function (item) {
+            w += parseInt(item.offsetWidth) + 38
+          })
+          that.$refs.tabUL.style.width = w + 'px'
+        }, 50)
+      }
     },
     closeLabel: function (index, label) {
       this.labelList.splice(index, 1)

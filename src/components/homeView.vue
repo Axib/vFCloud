@@ -28,9 +28,9 @@
       </vue-scroll>
     </div>
     <div :class="[menu_open ? 'tabbed round compress' : 'tabbed round']" v-if="labelList && labelList.length > 0">
-      <vue-scroll :ops="ops">
-        <ul>
-          <li :class='menu_index == label.id || menu_child_index == label.id ? "active" : ""' v-for="(label, index) in labelList" :key="label.key" v-on:click="chooseLabel(label)">
+      <vue-scroll :ops="opsTab" style="z-index: 4;">
+        <ul ref="tabUL">
+          <li ref="tabLi" :class='menu_index == label.id || menu_child_index == label.id ? "active" : ""' v-for="(label, index) in labelList" :key="label.key" v-on:click="chooseLabel(label)">
             {{label.name}}
             <img class="close" src="//przpvntfi.bkt.clouddn.com/image/icon/label_close.png" v-on:click="closeLabel(index, label)"/>
           </li>

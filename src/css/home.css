@@ -212,6 +212,7 @@
 .home-wrapper .components-wrapper.compress,
 .tabbed.compress {
   width: calc(100% - 162px);
+  overflow:hidden
 }
 
 /* Tabbed Styles */
@@ -224,9 +225,10 @@
   transition: width 0.3s;
   margin: 0 auto;
   border-bottom: 2px solid rgb(64, 158, 255);
-  overflow: hidden;
   transition: border 250ms ease;
   transition: width 300ms;
+  overflow: auto;
+  height: 33px;
 }
 .tabbed ul {
   margin: 0px;
@@ -248,7 +250,7 @@
   padding: 8px 2px;
   background-color: #FFF;
   margin-right: 38px;
-  z-index: 2;
+  z-index: 0.2;
   position: relative;
   cursor: pointer;
   color: #777;
@@ -294,7 +296,7 @@
   background:linear-gradient(-110deg,transparent 15px, #F4F7F9 0);
 }
 .tabbed ul li.active {
-  z-index: 3;
+  z-index: 0.3;
 }
 .tabbed ul li.active,
 .tabbed ul li.active:before,
