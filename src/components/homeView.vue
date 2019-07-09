@@ -15,13 +15,13 @@
         <div :class="[item.open ? 'td-d  open' : 'td-d']" v-for="(item, index) in menu_list" :key="item.id">
           <div :class="menu_index == item.id ? 'parent choose' : 'parent'" v-on:click="expansionMenu(index)">
             <img :class="[menu_open ? 'icon':'icon close']" :src="menu_index == item.id ? item.selectUrl : item.normalUrl">
-            <span :class="[menu_open ? '':'close']">{{item.name}}</span>
+            <span :class="[menu_open ? '':'close']">{{item.menuName}}</span>
             <img :class="[item.open ? 'status open':'status']" v-if="menu_open && item.children && item.children.length > 0" src="//przpvntfi.bkt.clouddn.com/image/menu/menu_open.png">
           </div>
           <div class="children" v-if="item.open">
             <div :class="menu_child_index == child.id ? 'child choose' : 'child'" v-for="(child) in item.children" v-on:click="expansionChildMenu(child)" :key="child.id">
               <img :class="[menu_open ? 'icon':'icon close']" :src="menu_child_index == child.id ? child.selectUrl : child.normalUrl">
-              <span :class="[menu_open ? '':'close']">{{child.name}}</span>
+              <span :class="[menu_open ? '':'close']">{{child.menuName}}</span>
             </div>
           </div>
         </div>
@@ -29,16 +29,16 @@
     </div>
     <div :class="[menu_open ? 'tabbed round compress' : 'tabbed round']" v-if="labelList && labelList.length > 0">
       <vue-scroll :ops="opsTab" style="z-index: 4;">
-        <ul ref="tabUL">
-          <li ref="tabLi" :class='menu_index == label.id || menu_child_index == label.id ? "active" : ""' v-for="(label, index) in labelList" :key="label.key" v-on:click="chooseLabel(label)">
-            {{label.name}}
-            <img class="close" src="//przpvntfi.bkt.clouddn.com/image/icon/label_close.png" v-on:click="closeLabel(index, label)"/>
+        <ul ref="tabUl">
+          <li ref="tabLi" :class='menu_index == label.id || menu_child_index == label.id ? "active" : ""' v-for="(label, index) in labelList" :key="label.menuKey" v-on:click="chooseLabel(label)">
+            {{label.menuName}}
+            <img class="close" src="//przpvntfi.bkt.clouddn.com/image/icon/label_close.png" v-on:click="closeLabel(index, label, $event)"/>
           </li>
         </ul>
       </vue-scroll>
     </div>
     <div :class="[menu_open ? 'components-wrapper compress' : 'components-wrapper']" v-if="labelList && labelList.length > 0">
-      <component :is="label.key" name="" v-for="(label) in labelList" :key="label.key" v-show="menu_index == label.id || menu_child_index == label.id"></component>
+      <component :is="label.menuKey" name="" v-for="(label) in labelList" :key="label.key" v-show="menu_index == label.id || menu_child_index == label.id"></component>
     </div>
   </div>
 </template>

@@ -18,7 +18,7 @@ export default {
           showDelay: 500,
           onlyShowBarOnScroll: false,
           keepShow: true,
-          background: 'rgba(0, 0, 0, 0.6)',
+          background: 'rgba(0, 0, 0, 0.3)',
           opacity: 1,
           hoverStyle: false,
           specifyBorderRadius: false,
@@ -28,148 +28,7 @@ export default {
           bottom: 0
         }
       },
-      menu_list: [
-        {
-          id: 'e38c5e7e7f6311e981b400163e0c7f33',
-          name: '设置',
-          normalUrl: '//przpvntfi.bkt.clouddn.com/image/menu/menu_setting_normal.png',
-          selectUrl: '//przpvntfi.bkt.clouddn.com/image/menu/menu_setting_select.png',
-          children: [{
-            id: 'e38c5e7e7f6311e981b4w2163e0c7f33',
-            name: '系统参数设置',
-            key: 'systemParamSet',
-            normalUrl: '//przpvntfi.bkt.clouddn.com/image/menu/menu_setting_normal.png',
-            selectUrl: '//przpvntfi.bkt.clouddn.com/image/menu/menu_setting_select.png',
-            children: []
-          }, {
-            id: 'e38c5e7e7f62131e981ba00163e0c7f3',
-            name: '常用资料设置',
-            key: 'commonDataSet',
-            normalUrl: '//przpvntfi.bkt.clouddn.com/image/menu/menu_setting_normal.png',
-            selectUrl: '//przpvntfi.bkt.clouddn.com/image/menu/menu_setting_select.png',
-            children: []
-          }]
-        },
-        {
-          id: 'e38c5e7e7f0231e981b400163e0c7f33',
-          name: '财务',
-          normalUrl: '//przpvntfi.bkt.clouddn.com/image/menu/menu_finance_normal.png',
-          selectUrl: '//przpvntfi.bkt.clouddn.com/image/menu/menu_finance_select.png',
-          children: [{
-            id: 'e38c5e7e7f6311esd1b4D0163e0c7f33',
-            name: '业绩统计',
-            key: 'performanceStatistics',
-            normalUrl: '//przpvntfi.bkt.clouddn.com/image/menu/menu_setting_normal.png',
-            selectUrl: '//przpvntfi.bkt.clouddn.com/image/menu/menu_setting_select.png',
-            children: []
-          }]
-        },
-        {
-          id: 'e38c5e7e7f6311e981b40kg63e0c7f33',
-          name: '人事',
-          normalUrl: '//przpvntfi.bkt.clouddn.com/image/menu/menu_personnel_normal.png',
-          selectUrl: '//przpvntfi.bkt.clouddn.com/image/menu/menu_personnel_select.png',
-          children: [{
-            id: 'e38c5e7emd9311e981b4H0163e0c7f33',
-            name: '员工异动',
-            key: 'employeeTurnover',
-            normalUrl: '//przpvntfi.bkt.clouddn.com/image/menu/menu_setting_normal.png',
-            selectUrl: '//przpvntfi.bkt.clouddn.com/image/menu/menu_setting_select.png',
-            children: []
-          }]
-        },
-        {
-          id: 'e38c5e7e7f631ks981b400163e0c7f33',
-          name: '收银',
-          normalUrl: '//przpvntfi.bkt.clouddn.com/image/menu/menu_cashier_normal.png',
-          selectUrl: '//przpvntfi.bkt.clouddn.com/image/menu/menu_cashier_select.png',
-          children: [{
-            id: 'e38c5e7e7f63102981b4k0163e0c7f33',
-            name: '买单',
-            key: 'settlement',
-            normalUrl: '//przpvntfi.bkt.clouddn.com/image/menu/menu_setting_normal.png',
-            selectUrl: '//przpvntfi.bkt.clouddn.com/image/menu/menu_setting_select.png',
-            children: []
-          }, {
-            id: 'e38c5e7elck311e981b4l0163e0c7f33',
-            name: '充值',
-            key: 'recharge',
-            normalUrl: '//przpvntfi.bkt.clouddn.com/image/menu/menu_setting_normal.png',
-            selectUrl: '//przpvntfi.bkt.clouddn.com/image/menu/menu_setting_select.png',
-            children: []
-          }, {
-            id: 'e38c5e7weck311e981b4l0163e0c7f33',
-            name: '办卡',
-            key: 'applyCard',
-            normalUrl: '//przpvntfi.bkt.clouddn.com/image/menu/menu_setting_normal.png',
-            selectUrl: '//przpvntfi.bkt.clouddn.com/image/menu/menu_setting_select.png',
-            children: []
-          }]
-        },
-        {
-          id: 'e38c5e7e7cls11e981b400163e0c7f33',
-          name: '会员',
-          normalUrl: '//przpvntfi.bkt.clouddn.com/image/menu/menu_member_normal.png',
-          selectUrl: '//przpvntfi.bkt.clouddn.com/image/menu/menu_member_select.png',
-          children: [{
-            id: 'e38c5e7e7f6311e981lom0163e0c7f33',
-            name: '会员卡资料',
-            key: 'memberCard',
-            normalUrl: '//przpvntfi.bkt.clouddn.com/image/menu/menu_setting_normal.png',
-            selectUrl: '//przpvntfi.bkt.clouddn.com/image/menu/menu_setting_select.png',
-            children: []
-          }, {
-            id: 'e38c5e7e7f6311e978g40N163e0c7f33',
-            name: '会员资料',
-            key: 'memberInfo',
-            normalUrl: '//przpvntfi.bkt.clouddn.com/image/menu/menu_setting_normal.png',
-            selectUrl: '//przpvntfi.bkt.clouddn.com/image/menu/menu_setting_select.png',
-            children: []
-          }]
-        },
-        {
-          id: 'e38c5e7e7f6311e9lxm400163e0c7f33',
-          name: '库存',
-          normalUrl: '//przpvntfi.bkt.clouddn.com/image/menu/menu_warehouse_normal.png',
-          selectUrl: '//przpvntfi.bkt.clouddn.com/image/menu/menu_warehouse_select.png',
-          children: [{
-            id: 'e38c5e7lo06311e981b40w163e0c7f33',
-            name: '产品入库',
-            key: 'productInStock',
-            normalUrl: '//przpvntfi.bkt.clouddn.com/image/menu/menu_setting_normal.png',
-            selectUrl: '//przpvntfi.bkt.clouddn.com/image/menu/menu_setting_select.png',
-            children: []
-          }, {
-            id: 'e38c5e7ekcm311e981br00163e0c7f33',
-            name: '产品出库',
-            key: 'productOutStock',
-            normalUrl: '//przpvntfi.bkt.clouddn.com/image/menu/menu_setting_normal.png',
-            selectUrl: '//przpvntfi.bkt.clouddn.com/image/menu/menu_setting_select.png',
-            children: []
-          }]
-        },
-        {
-          id: 'e38c5e7e7f6311elskb400163e0c7f33',
-          name: '盘点',
-          normalUrl: '//przpvntfi.bkt.clouddn.com/image/menu/menu_inventory_normal.png',
-          selectUrl: '//przpvntfi.bkt.clouddn.com/image/menu/menu_inventory_select.png',
-          children: [{
-            id: 'e38c5e7e7f63ke9981by00163e0c7f33',
-            name: '会员盘点',
-            key: 'memberInventory',
-            normalUrl: '//przpvntfi.bkt.clouddn.com/image/menu/menu_setting_normal.png',
-            selectUrl: '//przpvntfi.bkt.clouddn.com/image/menu/menu_setting_select.png',
-            children: []
-          }]
-        },
-        {
-          id: 'e38c5e7e7f631lox81b400163e0c7f33',
-          name: '关于',
-          key: 'about',
-          normalUrl: '//przpvntfi.bkt.clouddn.com/image/menu/menu_about_normal.png',
-          selectUrl: '//przpvntfi.bkt.clouddn.com/image/menu/menu_about_select.png'
-        }
-      ],
+      menu_list: [],
       conheight: {
         height: ''
       },
@@ -232,19 +91,20 @@ export default {
         if (!find) {
           this.labelList.push({
             id: menuItem.id,
-            key: menuItem.key,
-            name: menuItem.name,
+            menuKey: menuItem.menuKey,
+            menuName: menuItem.menuName,
+            parentId: menuItem.parentId,
             child: 0
           })
 
-          if (this.$refs.tabLi) {
+          if (this.$refs.tabLi && this.$refs.tabUl) {
             let that = this
             setTimeout(function () {
               var w = 0
               that.$refs.tabLi.forEach(function (item) {
                 w += parseInt(item.offsetWidth) + 38
               })
-              that.$refs.tabUL.style.width = w + 'px'
+              that.$refs.tabUl.style.width = w + 'px'
             }, 50)
           }
         }
@@ -264,18 +124,19 @@ export default {
       if (!find) {
         this.labelList.push({
           id: childItem.id,
-          key: childItem.key,
-          name: childItem.name,
+          menuKey: childItem.menuKey,
+          menuName: childItem.menuName,
+          parentId: childItem.parentId,
           child: 1
         })
-        if (this.$refs.tabLi) {
+        if (this.$refs.tabLi && this.$refs.tabUl) {
           let that = this
           setTimeout(function () {
             var w = 0
             that.$refs.tabLi.forEach(function (item) {
               w += parseInt(item.offsetWidth) + 38
             })
-            that.$refs.tabUL.style.width = w + 'px'
+            that.$refs.tabUl.style.width = w + 'px'
           }, 50)
         }
       }
@@ -283,19 +144,28 @@ export default {
     chooseLabel: function (label) {
       this.menu_child_index = label && label.child ? label.id : ''
       this.menu_index = label && !label.child ? label.id : ''
-
-      if (this.$refs.tabLi) {
+      // 把关闭的菜单展开
+      if (label.parentId) {
+        for (var i = 0; i < this.menu_list.length; i++) {
+          var item = this.menu_list[i]
+          if (!item.open && item.id == label.parentId) {
+            this.expansionMenu(i)
+            break
+          }
+        }
+      }
+      if (this.$refs.tabLi && this.$refs.tabUl) {
         let that = this
         setTimeout(function () {
           var w = 0
           that.$refs.tabLi.forEach(function (item) {
             w += parseInt(item.offsetWidth) + 38
           })
-          that.$refs.tabUL.style.width = w + 'px'
+          that.$refs.tabUl.style.width = w + 'px'
         }, 50)
       }
     },
-    closeLabel: function (index, label) {
+    closeLabel: function (index, label, e) {
       this.labelList.splice(index, 1)
       if (this.menu_child_index == label.id || this.menu_index == label.id) {
         var labelItem = null
@@ -309,6 +179,8 @@ export default {
           that.chooseLabel(labelItem)
         }, 1)
       }
+      // 终止事件冒泡
+      e.stopPropagation()
     },
     initFrame: function () {
       this.conheight.height = window.innerHeight + 'px'
@@ -331,5 +203,12 @@ export default {
     setTimeout(function () {
       that.displayControl()
     }, 1000)
+    this.$http.get(this.NET.BASE_URL + '/auth/user/privilege/menu/get')
+      .then(res => {
+        that.menu_list = res.data.result
+      })
+      .catch(res => {
+        alert(res)
+      })
   }
 }
