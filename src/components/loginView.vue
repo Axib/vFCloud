@@ -18,7 +18,7 @@
       </div>
       <div class="input-div">
         <span>密&nbsp;&nbsp;&nbsp;&nbsp;碼：</span>
-        <input>
+        <input type="password">
       </div>
       <div>
         <button class="login-btn" v-on:click="login()">登录</button>
