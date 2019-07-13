@@ -3,7 +3,7 @@
   height: 1000px;
   -webkit-filter: blur(15px);
   filter: blur(15px);
-  background-image: url("//przpvntfi.bkt.clouddn.com/image/home_page.jpg");
+  background-image: url("//fcloud.duoke.co/image/home_page.jpg");
 }
 .login-wrapper {
   position: absolute;
@@ -87,13 +87,13 @@
 }
 
 .swiper-slide.slide1 {
-  background-image: url("//przpvntfi.bkt.clouddn.com/image/home_page.jpg");
+  background-image: url("//fcloud.duoke.co/image/home_page.jpg");
 }
 
 .swiper-slide.slide2 {
-  background-image: url("//przpvntfi.bkt.clouddn.com/image/home_page2.jpg");
+  background-image: url("//fcloud.duoke.co/image/home_page2.jpg");
 }
 
 .swiper-slide.slide3 {
-  background-image: url("//przpvntfi.bkt.clouddn.com/image/home_page3.jpg");
+  background-image: url("//fcloud.duoke.co/image/home_page3.jpg");
 }

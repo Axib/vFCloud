@@ -16,7 +16,7 @@
           <div :class="menu_index == item.id ? 'parent choose' : 'parent'" v-on:click="expansionMenu(index)">
             <img :class="[menu_open ? 'icon':'icon close']" :src="menu_index == item.id ? item.selectUrl : item.normalUrl">
             <span :class="[menu_open ? '':'close']">{{item.menuName}}</span>
-            <img :class="[item.open ? 'status open':'status']" v-if="menu_open && item.children && item.children.length > 0" src="//przpvntfi.bkt.clouddn.com/image/menu/menu_open.png">
+            <img :class="[item.open ? 'status open':'status']" v-if="menu_open && item.children && item.children.length > 0" src="//fcloud.duoke.co/image/menu/menu_open.png">
           </div>
           <div class="children" v-if="item.open">
             <div :class="menu_child_index == child.id ? 'child choose' : 'child'" v-for="(child) in item.children" v-on:click="expansionChildMenu(child)" :key="child.id">
@@ -32,7 +32,7 @@
         <ul ref="tabUl">
           <li ref="tabLi" :class='menu_index == label.id || menu_child_index == label.id ? "active" : ""' v-for="(label, index) in labelList" :key="label.menuKey" v-on:click="chooseLabel(label)">
             {{label.menuName}}
-            <img class="close" src="//przpvntfi.bkt.clouddn.com/image/icon/label_close.png" v-on:click="closeLabel(index, label, $event)"/>
+            <img class="close" src="//fcloud.duoke.co/image/icon/label_close.png" v-on:click="closeLabel(index, label, $event)"/>
           </li>
         </ul>
       </vue-scroll>
