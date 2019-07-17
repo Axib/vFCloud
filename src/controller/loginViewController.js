@@ -7,19 +7,46 @@ export default {
       loadLogin: false,
       conheight: {
         height: ''
-      }
+      },
+      chainId: '',
+      userName: '',
+      password: ''
     }
   },
   methods: {
     login () {
-      this.$http.get(this.NET.BASE_URL + '/member/comp/001/get')
+      if (this.chainId == null || this.chainId.length == 0) {
+        alert('请输入连锁编码')
+        return
+      }
+      if (this.userName == null || this.userName.length == 0) {
+        alert('请输入用户名')
+        return
+      }
+      var params = {
+        chainId: this.chainId,
+        userName: this.userName,
+        password: this.password
+      }
+      this.$http.post(this.NET.BASE_URL + '/user/login', params)
         .then(res => {
           console.log(res, 123)
-          this.$router.push('home')
+          if (res.data && res.data.success) {
+            this.$router.push('home')
+          } else {
+            if (res.data && res.data.msg) {
+              alert(res.data.msg)
+            } else {
+              alert('登录失败')
+            }
+          }
         })
         .catch(res => {
-          console.log(res, 321)
-          console.log(this.loadLogin, 12321)
+          if (res.data && res.data.message) {
+            alert(res.data.message)
+          } else {
+            alert('登录失败')
+          }
         })
     },
     register: function () {

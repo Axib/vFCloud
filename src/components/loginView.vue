@@ -12,20 +12,24 @@
       </div>
     </div>
     <div :class="{'login-wrapper load': loadLogin, 'login-wrapper': !loadLogin}">
-      <div class="input-div" id="login-div">
-        <span>用戶名：</span>
-        <input>
+      <div class="input-div">
+        <span>連鎖編碼：</span>
+        <input v-model="chainId">
       </div>
       <div class="input-div">
-        <span>密&nbsp;&nbsp;&nbsp;&nbsp;碼：</span>
-        <input type="password">
+        <span>&nbsp;用&nbsp;戶&nbsp;名：</span>
+        <input v-model="userName">
+      </div>
+      <div class="input-div">
+        <span>用戶密碼：</span>
+        <input type="password" v-model="password">
       </div>
       <div>
-        <button class="login-btn" v-on:click="login()">登录</button>
-        <button class="login-btn" v-on:click="register()">注册</button>
+        <button class="login-btn" v-on:click="login()">登錄</button>
+        <button class="login-btn" v-on:click="register()">註冊</button>
       </div>
       <div class="forget-div">
-        <span class="forget-span" v-on:click="register()">忘记密码?</span>
+        <span class="forget-span" v-on:click="register()">忘記密碼?</span>
       </div>
     </div>
   </div>
