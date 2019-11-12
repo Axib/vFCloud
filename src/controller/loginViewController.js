@@ -17,10 +17,12 @@ export default {
     login () {
       if (this.chainId == null || this.chainId.length == 0) {
         alert('请输入连锁编码')
+        document.getElementById('chainId').focus()
         return
       }
       if (this.userName == null || this.userName.length == 0) {
         alert('请输入用户名')
+        document.getElementById('userName').focus()
         return
       }
       var params = {
@@ -28,8 +30,10 @@ export default {
         userName: this.userName,
         password: this.password
       }
+      this.$store.commit('showLoading')
       this.$http.post(this.NET.BASE_URL + '/user/login', params)
         .then(res => {
+          this.$store.commit('hideLoading')
           console.log(res, 123)
           if (res.data && res.data.success) {
             this.$router.push('home')
@@ -42,6 +46,7 @@ export default {
           }
         })
         .catch(res => {
+          this.$store.commit('hideLoading')
           if (res.data && res.data.message) {
             alert(res.data.message)
           } else {
@@ -61,6 +66,19 @@ export default {
     },
     initFrame: function () {
       this.conheight.height = window.innerHeight + 'px'
+    },
+    keyup: function (event) {
+      console.log(event)
+      if (event.keyCode == 13) {
+        if (event.target.id == 'chainId') {
+          document.getElementById('userName').focus()
+        } else if (event.target.id == 'userName') {
+          document.getElementById('password').focus()
+        } else if (event.target.id == 'password') {
+          this.login()
+        }
+        event.target.blur()
+      }
     }
   },
   mounted () {

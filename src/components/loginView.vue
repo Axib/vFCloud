@@ -14,15 +14,15 @@
     <div :class="{'login-wrapper load': loadLogin, 'login-wrapper': !loadLogin}">
       <div class="input-div">
         <span>連鎖編碼：</span>
-        <input v-model="chainId">
+        <input v-model="chainId" onblur="" @keyup="keyup($event)" id="chainId">
       </div>
       <div class="input-div">
         <span>&nbsp;用&nbsp;戶&nbsp;名：</span>
-        <input v-model="userName">
+        <input v-model="userName" @keyup="keyup($event)" id="userName">
       </div>
       <div class="input-div">
         <span>用戶密碼：</span>
-        <input type="password" v-model="password">
+        <input type="password" v-model="password" @keyup="keyup($event)" id="password">
       </div>
       <div>
         <button class="login-btn" v-on:click="login()">登錄</button>
