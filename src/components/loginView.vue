@@ -5,6 +5,8 @@
       <div class="swiper-container">
         <div class="swiper-wrapper">
           <div class="swiper-slide slide1"></div>
+          <div class="swiper-slide slide2"></div>
+          <!--<div class="swiper-slide slide3"></div>-->
         </div>
         <!-- 如果需要分页器 -->
         <div class="swiper-pagination"></div>
@@ -38,4 +40,6 @@
 <script src="../controller/loginViewController.js"></script>
 
 <style src="../css/login.css"></style>
-<style src="swiper/dist/css/swiper.css"></style>
+<style scoped>
+  @import '//fcloud.duoke.co/file/swiper-3.4.2.min.css';
+</style>

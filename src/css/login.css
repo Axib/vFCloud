@@ -50,9 +50,13 @@
 }
 
 .input-div input {
-  height: 20px;
+  height: 22px;
   font-size: 14px;
   width: 125px;
+  text-indent: 5px;
+  border-radius: 2px;
+  border-color: #bfcbd9;
+  border-width: 1px;
 }
 
 .login-btn {
@@ -98,7 +102,7 @@
 }
 
 .swiper-slide.slide2 {
-  background-image: url("//fcloud.duoke.co/image/home_page2.jpg");
+  background-image: url("//fcloud.duoke.co/image/home_page3.jpg");
 }
 
 .swiper-slide.slide3 {

@@ -81,16 +81,16 @@ export default {
     }
   },
   mounted () {
+    /** https://www.swiper.com.cn/api/ */
     new Swiper ('.swiper-container', {
       pagination: '.swiper-pagination', // pagination分页器
-      nextButton: '.swiper-button-next', // 前进后退按钮
-      prevButton: '.swiper-button-prev',
-      paginationClickable: true, // 参数设置为true时，点击分页器的指示点分页器会控制Swiper切换
       spaceBetween: 30, // slide之间的距离（单位px）。
       centeredSlides: true, // 设定为true时，活动块会居中，而不是默认状态下的居左。
       loop : true, // 复制多份循环(这里就是让轮播看起来是循环的，去掉这个就恢复了默认的swiper轮播)
-      autoplay: 1000, // 自动切换的时间间隔（单位ms），不设定该参数slide不会自动切换。
-      autoplayDisableOnInteraction: false // 点击后打断auto-play
+      speed: 1500, // 自动切换的时间间隔（单位ms），不设定该参数slide不会自动切换。
+      autoplay: {
+        disableOnInteraction: false // 点击后打断auto-play
+      }
     })
     const that = this
     window.onresize = () => {
