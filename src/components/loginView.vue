@@ -34,6 +34,11 @@
         <span class="forget-span" v-on:click="register()">忘記密碼?</span>
       </div>
     </div>
+    <div class="filing">
+      <a href="http://www.beian.miit.gov.cn/" target="_blank">备案号：沪ICP备19017490号</a>
+      <a href="" target="_blank" style="margin-left: 10vh;">微信号：engle1116</a>
+      <span></span>
+    </div>
   </div>
 </template>
 

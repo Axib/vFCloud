@@ -8,7 +8,7 @@
 .login-wrapper {
   position: absolute;
   z-index: 1000;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(222, 222, 222, 0.9);
   padding: 30px 60px;
   border-radius: 5px;
   top:-100%;
@@ -80,7 +80,7 @@
 .course-banner-box {
   position: absolute;
   width: 100%;
-  height: 560px;
+  height: 460px;
   top:50%;
   -webkit-transform: translate(0,-50%);
   -moz-transform: translate(0,-50%);
@@ -93,18 +93,25 @@
 }
 
 .swiper-slide {
-  background-size: auto 100%;
+  background-size: 100% auto ;
   background-position:center center;
 }
 
 .swiper-slide.slide1 {
-  background-image: url("//fcloud.duoke.co/image/home_page.jpg");
+  background-image: url("//fcloud.duoke.co/image/home_page_1.jpg");
 }
 
 .swiper-slide.slide2 {
-  background-image: url("//fcloud.duoke.co/image/home_page3.jpg");
+  background-image: url("//fcloud.duoke.co/image/home_page_2.jpg");
 }
 
 .swiper-slide.slide3 {
-  background-image: url("//fcloud.duoke.co/image/home_page3.jpg");
+  background-image: url("//fcloud.duoke.co/image/home_page.jpg");
+}
+
+.filing {
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
 }
